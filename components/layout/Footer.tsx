@@ -4,7 +4,7 @@
 import icons from "icons";
 
 const links = [
-  ["https://github.com/denoland/meet-me", "Source"],
+  ["https://github.com/herbowicz/deno", "Source"],
   [
     "https://www.figma.com/file/P0XsTDIeiwNhm8jFS03gwz/Deno-Showcases-Mockup?node-id=0%3A1",
     "Figma",

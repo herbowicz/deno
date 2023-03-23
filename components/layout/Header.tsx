@@ -78,7 +78,7 @@ function UserDropdown({ user }: { user: User }) {
         >
           Go to Google Calendar
         </UserDropdownMenuItem>
-        <UserDropdownMenuItem href="https://github.com/denoland/meet-me">
+        <UserDropdownMenuItem href="https://github.com/herbowicz/deno">
           Source code
         </UserDropdownMenuItem>
         <UserDropdownMenuItem href="/signout" native>
