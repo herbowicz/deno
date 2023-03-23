@@ -159,7 +159,7 @@ export async function saveUser(user: User): Promise<void> {
   await setDoc(doc(firestore(), "users", user.id), user);
 }
 
-/** Returns true if the user's settings are ready to start using Meet Me.
+/** Returns true if the user's settings are ready to start using Deno Dev.
  * This check is used for sending user to onboarding flow. */
 export function isUserReady(
   user: Omit<User, "googleRefreshToken"> | undefined

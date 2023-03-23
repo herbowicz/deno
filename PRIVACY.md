@@ -1,8 +1,8 @@
-# Meet Me Privacy Policy
+# Deno Dev Privacy Policy
 
 Deno Land Inc ("Deno", "company", "we", "our", "us") is a corporation registered
 in Delaware, USA doing business as "Deno". This privacy policy will explain how
-our organization uses the personal data we collect from you when you use Meet Me
+our organization uses the personal data we collect from you when you use Deno Dev
 ("Service").
 
 Topics:
@@ -24,13 +24,13 @@ Topics:
 
 ## What data do we collect?
 
-For users of Meet Me, we collect your email address and Google login. We also
+For users of Deno Dev, we collect your email address and Google login. We also
 automatically collect from you your usage information, cookies, and device
 information, subject, where necessary, to your consent.
 
 ## How do we collect your data?
 
-- Your email address is collected during registration to Meet Me.
+- Your email address is collected during registration to Deno Dev.
 - Usage information, cookies, and device information are collected automatically
   when viewing our websites.
 
@@ -38,7 +38,7 @@ information, subject, where necessary, to your consent.
 
 Deno collects your data so that we can:
 
-- Manage your account. Meet Me requires your email address for notifications,
+- Manage your account. Deno Dev requires your email address for notifications,
   like when being invited an organization.
 - Analyze usage patterns of our products and services.
 
@@ -49,7 +49,7 @@ Deno will not share your information with other parties.
 Deno takes measures reasonably necessary to protect User Personal Information
 from unauthorized access, alteration, or destruction.
 
-Deno will keep your email address indefinitely. Contact us at privacy@deno.com
+Deno will keep your email address indefinitely. Contact us at herbowicz@gmail.com
 to request your information be deleted.
 
 ## Marketing
@@ -59,7 +59,7 @@ future send you information about products and services of ours that we think
 you might like.
 
 You have the right at any time to stop Deno from contacting you for marketing
-purposes. Please contact us at privacy@deno.com
+purposes. Please contact us at herbowicz@gmail.com
 
 ## What are your data protection rights?
 
@@ -89,7 +89,7 @@ rights. Every user is entitled to the following:
 
 - If you make a request, we have one month to respond to you. If you would like
   to exercise any of these rights, please contact us at our email:
-  privacy@deno.com
+  herbowicz@gmail.com
 
 ## Cookies
 
@@ -141,4 +141,4 @@ this web page. This privacy policy was last updated on December 2 2021.
 
 If you have any questions about Deno’s privacy policy, the data we hold on you,
 or you would like to exercise one of your data protection rights, please do not
-hesitate to contact us at privacy@deno.com.
+hesitate to contact us at herbowicz@gmail.com.

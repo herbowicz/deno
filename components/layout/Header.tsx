@@ -25,7 +25,7 @@ export function Header(
         <Link to="/">
           <icons.Logo />
         </Link>{" "}
-        {isMyPage ? "My Meetings" : "Meet Me"}
+        {isMyPage ? "My Meetings" : "Deno Dev"}
       </div>
       <div>
         {user && isInMyPage && <UserAccountButton user={user} />}

@@ -1,11 +1,11 @@
-# Meet Me Terms of Service
+# Deno Dev Terms of Service
 
 ## Introduction
 
 Deno Land Inc ("Deno", "company", "we", "our", "us") is a corporation registered
 in Delaware, USA doing business as "Deno".
 
-These Terms of Service ("Terms") govern your use of our service Meet Me
+These Terms of Service ("Terms") govern your use of our service Deno Dev
 ("Service") located at https://herbowicz.deno.dev operated by Deno Land Inc doing
 business as Deno.
 

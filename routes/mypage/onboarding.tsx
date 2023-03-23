@@ -124,13 +124,13 @@ function ChooseURL(
     <>
       <div className="max-w-md mx-auto">
         <h1 className="text-lg">
-          Welcome to <span className="font-semibold">Meet Me</span>!
+          Welcome to <span className="font-semibold">Deno Dev</span>!
         </h1>
       </div>
 
       <div className="mt-8 flex flex-col gap-4 border rounded-lg border-neutral-700 py-8 px-8 max-w-lg mx-auto">
         <h2 className="font-medium text-lg">
-          Create your Meet Me URL{" "}
+          Create your Deno Dev URL{" "}
           <span className="ml-2 text-sm font-normal text-neutral-600">
             (step 1 of 3)
           </span>

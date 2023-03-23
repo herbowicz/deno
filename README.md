@@ -1,6 +1,6 @@
 ![](./doc/screenshot.png)
 
-# Meet Me
+# Deno Dev
 
 > [calendly](https://calendly.com/) clone in Deno
 
@@ -26,7 +26,7 @@ Then run the deployment locally:
 deno task dev
 ```
 
-This starts Meet Me service in your local machine.
+This starts Deno Dev service in your local machine.
 
 ## Testing
 
@@ -99,5 +99,5 @@ Firestore to be available.
 
 For Deno Land employees:
 
-- You can find these values in `Meet Me API Credentials` section in the password
+- You can find these values in `Deno Dev API Credentials` section in the password
   manager.

@@ -73,7 +73,7 @@ export function SlugSettings({ user, reloadUser }: SettingsProps) {
         title: "URL updated!",
         type: "success",
         message:
-          `Your Meet Me URL has been updated to herbowicz.deno.dev/${slug}`,
+          `Your Deno Dev URL has been updated to herbowicz.deno.dev/${slug}`,
       });
       reloadUser();
     } catch (e) {
@@ -89,7 +89,7 @@ export function SlugSettings({ user, reloadUser }: SettingsProps) {
 
   return (
     <SettingsBox
-      title="Meet Me URL"
+      title="Deno Dev URL"
       description="Choose a URL that describes you or your business in a concise way. Make it short and easy to remember so you can share links with ease."
     >
       <div className="flex items-center gap-2">
