@@ -140,7 +140,7 @@ function ChooseURL(
           Make it short and easy to remember so you can share links with ease.
         </p>
         <div className="flex items-center gap-2">
-          <span>https://meet-me.deno.dev/</span>
+          <span>https://herbowicz.deno.dev/</span>
           <input
             className="rounded-lg py-2 px-4 text-black"
             placeholder="url"

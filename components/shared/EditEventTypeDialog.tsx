@@ -125,7 +125,7 @@ export default function EditEventTypeDialog(
             <h3>URL</h3>
             <p className="text-neutral-500">Choose your event's url</p>
             <p className="flex items-center gap-2">
-              https://meet-me.deno.dev/{user.slug}/{" "}
+              https://herbowicz.deno.dev/{user.slug}/{" "}
               <Input placeholder="url" onChange={setSlug} value={slug} />
             </p>
           </div>

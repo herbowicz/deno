@@ -52,7 +52,7 @@ export default function EventTypeCard(
   };
 
   const eventPath = `/${user.slug}/${eventType.slug || eventType.id}`;
-  const eventUrl = `https://meet-me.deno.dev${eventPath}`;
+  const eventUrl = `https://herbowicz.deno.dev${eventPath}`;
 
   return (
     <div

@@ -61,12 +61,12 @@ function UserDropdown({ user }: { user: User }) {
         <span>{user.name}</span>
         <div className="flex items-center gap-1">
           <a className="text-blue-400" href={`/${user.slug}`} target="_blank">
-            meet-me.deno.dev/{user.slug}
+            herbowicz.deno.dev/{user.slug}
           </a>
           <IconLink href={`/${user.slug}`} target="_blank">
             <icons.ExternalLink />
           </IconLink>
-          <Copyable value={`https://meet-me.deno.dev/${user.slug}`} />
+          <Copyable value={`https://herbowicz.deno.dev/${user.slug}`} />
         </div>
       </div>
       <ul>

@@ -54,7 +54,7 @@ export type EventType = {
   description?: string;
   duration: number;
   /** The slug is used as the last part of the booking page of this event type
-   * like `https://meet-me.deno.dev/[user-slug]/[event-type-slug]`.
+   * like `https://herbowicz.deno.dev/[user-slug]/[event-type-slug]`.
    */
   slug?: string;
 };
@@ -89,7 +89,7 @@ export async function getUserById(id: string): Promise<User | undefined> {
 /** Gets a user by the given email. */
 export async function getUserByEmail(email: string): Promise<User | undefined> {
   const snapshot = await getDocs(
-    query(collection(firestore(), "users"), where("email", "==", email)),
+    query(collection(firestore(), "users"), where("email", "==", email))
   );
   return getFirstData<User>(snapshot);
 }
@@ -97,7 +97,7 @@ export async function getUserByEmail(email: string): Promise<User | undefined> {
 /** Gets a user by the given email. */
 export async function getUserBySlug(slug: string): Promise<User | undefined> {
   const snapshot = await getDocs(
-    query(collection(firestore(), "users"), where("slug", "==", slug)),
+    query(collection(firestore(), "users"), where("slug", "==", slug))
   );
   return getFirstData<User>(snapshot);
 }
@@ -113,17 +113,22 @@ function createDefaultCalendarEvent(): EventType {
 }
 
 export function isValidEventType(event: EventType): event is EventType {
-  return uuidValidate(event.id) && typeof event.title === "string" &&
-    typeof event.duration === "number";
+  return (
+    uuidValidate(event.id) &&
+    typeof event.title === "string" &&
+    typeof event.duration === "number"
+  );
 }
 
 // deno-lint-ignore no-explicit-any
 export function isValidRange(range: any = {}): range is WeekRange {
   const { weekDay, startTime, endTime } = range;
-  return isValidWeekDay(weekDay) &&
+  return (
+    isValidWeekDay(weekDay) &&
     isValidHourMinute(startTime) &&
     isValidHourMinute(endTime) &&
-    hourMinuteToSec(endTime)! - hourMinuteToSec(startTime)! > 0;
+    hourMinuteToSec(endTime)! - hourMinuteToSec(startTime)! > 0
+  );
 }
 
 /** Creates a user by the given email. This throws if there's already
@@ -157,13 +162,16 @@ export async function saveUser(user: User): Promise<void> {
 /** Returns true if the user's settings are ready to start using Meet Me.
  * This check is used for sending user to onboarding flow. */
 export function isUserReady(
-  user: Omit<User, "googleRefreshToken"> | undefined,
+  user: Omit<User, "googleRefreshToken"> | undefined
 ) {
   if (!user) {
     return false;
   }
-  return user.slug !== undefined && user.availabilities !== undefined &&
-    user.timeZone !== undefined;
+  return (
+    user.slug !== undefined &&
+    user.availabilities !== undefined &&
+    user.timeZone !== undefined
+  );
 }
 
 export function isUserAuthorized(user: Pick<User, "googleRefreshToken">) {
@@ -175,7 +183,7 @@ export async function getUserAvailability(
   user: User,
   start: Date,
   end: Date,
-  freeBusyApi: string,
+  freeBusyApi: string
 ) {
   const body = JSON.stringify({
     timeMin: start.toISOString(),
@@ -187,22 +195,25 @@ export async function getUserAvailability(
     body,
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${user.googleAccessToken}`,
+      Authorization: `Bearer ${user.googleAccessToken}`,
     },
   });
   const data = await resp.json();
   if (!resp.ok) {
     throw new Error(data.error.message);
   }
-  const busyRanges = data.calendars[user.email].busy.map((
-    { start, end }: { start: string; end: string },
-  ) => ({ start: new Date(start), end: new Date(end) })) as Range[];
+  const busyRanges = data.calendars[user.email].busy.map(
+    ({ start, end }: { start: string; end: string }) => ({
+      start: new Date(start),
+      end: new Date(end),
+    })
+  ) as Range[];
   const sourceAvailableRanges = getAvailableRangesBetween(
     start,
     end,
     user.availabilities!,
     // deno-lint-ignore no-explicit-any
-    user.timeZone as any,
+    user.timeZone as any
   );
 
   return subtractRangeListFromRangeList(sourceAvailableRanges, busyRanges);
@@ -210,7 +221,7 @@ export async function getUserAvailability(
 
 export async function ensureAccessTokenIsFreshEnough(
   user: User,
-  tokenEndpoint: string,
+  tokenEndpoint: string
 ) {
   if (needsAccessTokenRefresh(user)) {
     const params = new URLSearchParams();
@@ -229,13 +240,13 @@ export async function ensureAccessTokenIsFreshEnough(
       const data = await resp.json();
       throw Error(`Token refresh failed: ${data.error_description}`);
     }
-    const body = await resp.json() as {
+    const body = (await resp.json()) as {
       access_token: string;
       expires_in: number;
     };
     user.googleAccessToken = body.access_token;
     user.googleAccessTokenExpires = new Date(
-      Date.now() + body.expires_in * 1000,
+      Date.now() + body.expires_in * 1000
     );
     await saveUser(user);
   }
@@ -243,7 +254,7 @@ export async function ensureAccessTokenIsFreshEnough(
 
 /** Returns true if the access token needs to be refreshed */
 export function needsAccessTokenRefresh(
-  user: Pick<User, "googleAccessTokenExpires">,
+  user: Pick<User, "googleAccessTokenExpires">
 ): boolean {
   const expires = user.googleAccessTokenExpires;
   if (!expires) {
@@ -257,7 +268,7 @@ export function needsAccessTokenRefresh(
 /** Gets the token by the given hash. */
 export async function getTokenByHash(hash: string): Promise<Token | undefined> {
   const snapshot = await getDocs(
-    query(collection(firestore(), "tokens"), where("hash", "==", hash)),
+    query(collection(firestore(), "tokens"), where("hash", "==", hash))
   );
   return getFirstData<Token>(snapshot);
 }
@@ -273,8 +284,8 @@ export async function getUserByToken(token: string) {
 async function sha256(str: string) {
   return dec.decode(
     hexEncode(
-      new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(str))),
-    ),
+      new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(str)))
+    )
   );
 }
 

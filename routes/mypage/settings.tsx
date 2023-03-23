@@ -73,7 +73,7 @@ export function SlugSettings({ user, reloadUser }: SettingsProps) {
         title: "URL updated!",
         type: "success",
         message:
-          `Your Meet Me URL has been updated to meet-me.deno.dev/${slug}`,
+          `Your Meet Me URL has been updated to herbowicz.deno.dev/${slug}`,
       });
       reloadUser();
     } catch (e) {
@@ -93,7 +93,7 @@ export function SlugSettings({ user, reloadUser }: SettingsProps) {
       description="Choose a URL that describes you or your business in a concise way. Make it short and easy to remember so you can share links with ease."
     >
       <div className="flex items-center gap-2">
-        https://meet-me.deno.dev/
+        https://herbowicz.deno.dev/
         <input
           className="rounded-lg py-2 px-4 text-black"
           placeholder="url"
