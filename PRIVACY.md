@@ -1,8 +1,6 @@
 # Deno Dev Privacy Policy
 
-Deno Land Inc ("Deno", "company", "we", "our", "us") is a corporation registered
-in Delaware, USA doing business as "Deno". This privacy policy will explain how
-our organization uses the personal data we collect from you when you use Deno Dev
+This privacy policy will explain how our organization uses the personal data we collect from you when you use Deno Dev
 ("Service").
 
 Topics:

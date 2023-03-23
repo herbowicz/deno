@@ -2,12 +2,8 @@
 
 ## Introduction
 
-Deno Land Inc ("Deno", "company", "we", "our", "us") is a corporation registered
-in Delaware, USA doing business as "Deno".
-
 These Terms of Service ("Terms") govern your use of our service Deno Dev
-("Service") located at https://herbowicz.deno.dev operated by Deno Land Inc doing
-business as Deno.
+("Service") located at https://herbowicz.deno.dev.
 
 Our Privacy Policy also governs your use of our Service and explains how we
 collect, safeguard and disclose information that results from your use of our
@@ -148,4 +144,4 @@ web page. These Terms of Service were last updated on June 24 2022.
 ## How to contact us
 
 If you have any questions about these Terms of Service, please do not hesitate
-to contact us at deploy@deno.com.
+to contact us at herbowicz@gmail.com.
